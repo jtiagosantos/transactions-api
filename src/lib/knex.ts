@@ -2,9 +2,9 @@ import { knex as setupKnex, Knex } from 'knex';
 import { env } from '../env';
 
 export const config = {
-  client: env.BATABASE_CLIENT,
+  client: env.DATABASE_CLIENT,
   connection:
-    env.BATABASE_CLIENT === 'sqlite'
+    env.DATABASE_CLIENT === 'sqlite'
       ? {
           filename: env.DATABASE_URL,
         }

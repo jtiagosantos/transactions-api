@@ -9,7 +9,7 @@ if (process.env.NODE_ENV === 'test') {
 
 const envSchema = z.object({
   NODE_ENV: z.enum(['development', 'test', 'production']).default('production'),
-  BATABASE_CLIENT: z.enum(['sqlite', 'pg']),
+  DATABASE_CLIENT: z.enum(['sqlite', 'pg']),
   DATABASE_URL: z.string({
     required_error: 'DATABASE_URL is a required environment variable',
   }),
